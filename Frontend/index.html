@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Shopping Cart System</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">Shop<span>Ease</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#cart">Cart 🛒 (<span id="navCount">0</span>)</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to ShopEase</h1>
+        <p>Your simple and convenient online shopping experience.</p>
+    </section>
+
+    <!-- Product Section -->
+    <div class="container" id="products">
+
+        <h2>Available Products</h2>
+
+        <div class="products" id="productList"></div>
+
+        <!-- Shopping Cart -->
+        <div class="cart-section" id="cart">
+
+            <h2>Shopping Cart 🛒</h2>
+
+            <div id="cartItems">
+                <p class="empty">Your shopping cart is empty.</p>
+            </div>
+
+            <div class="cart-buttons">
+
+                <button class="secondary" onclick="undoLast()">
+                    Undo Last Added Item
+                </button>
+
+                <button class="secondary" onclick="sortCart()">
+                    Sort High to Low
+                </button>
+
+            </div>
+
+            <div class="total">
+                Grand Total: ₹<span id="total">0</span>
+            </div>
+
+            <button class="checkout" onclick="checkout()">
+                Proceed to Checkout
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Online Shopping Cart System</p>
+        <p>Developed using HTML, CSS and JavaScript</p>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>
